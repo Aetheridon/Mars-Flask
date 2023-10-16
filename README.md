@@ -1,2 +1,2 @@
 # Mars-Flask
-Pull Images from Mars rovers using NASA API and Flask as a front-end
+Images from Mars Rovers from user input as a web application using Flask as a backend
