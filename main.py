@@ -54,9 +54,12 @@ def camera_selector():
     else:
         return render_template("cameras.html", cameras=cameras)
 
-@app.route("/images", methods=["GET"])
+@app.route("/images", methods=["POST", "GET"])
 def display_images():
-    if request.method == "GET":
+    if request.method == "POST":
+        user_data.clear()
+        return redirect(url_for("main_page"))
+    else:
         image_list = get_images(user_data)
         return render_template("images.html", image_list=image_list)
     
